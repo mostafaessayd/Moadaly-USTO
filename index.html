@@ -1,11 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>حساب المعدل العام</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<h1>حساب المعدل العام للفصل</h1>
+
+<div class="container">
+
+    <div class="row header">
+        <span>المادة</span>
+        <span>Exam</span>
+        <span>CC / TD / TP</span>
+        <span>المعامل</span>
+    </div>
+
+    <div class="row">
+        <span>AND</span>
+        <input id="and_exam" value="0" oninput="calculer()">
+        <input id="and_cc" value="0" oninput="calculer()">
+        <input value="2" disabled>
+    </div>
+
+    <div class="row">
+        <span>MODSIM</span>
+        <input id="modsim_exam" value="0" oninput="calculer()">
+        <input id="modsim_cc" value="0" oninput="calculer()">
+        <input value="2" disabled>
+    </div>
+
+    <div class="row">
+        <span>ROC</span>
+        <input id="roc_exam" value="0" oninput="calculer()">
+        <input id="roc_cc" value="0" oninput="calculer()">
+        <input value="2" disabled>
+    </div>
+
+    <div class="row">
+        <span>AA</span>
+        <input id="aa_exam" value="0" oninput="calculer()">
+        <input id="aa_cc" value="0" oninput="calculer()">
+        <input value="1" disabled>
+    </div>
+
+    <div class="row">
+        <span>FLI</span>
+        <input id="fli_exam" value="0" oninput="calculer()">
+        <input disabled>
+        <input value="1" disabled>
+    </div>
+
+    <div class="row">
+        <span>TNS</span>
+        <input id="tns_exam" value="0" oninput="calculer()">
+        <input disabled>
+        <input value="1" disabled>
+    </div>
+
+    <div class="row">
+        <span>ASR</span>
+        <input id="asr_exam" value="0" oninput="calculer()">
+        <input id="asr_cc" value="0" oninput="calculer()">
+        <input value="2" disabled>
+    </div>
+
+    <div class="row">
+        <span>BDA</span>
+        <input id="bda_exam" value="0" oninput="calculer()">
+        <div class="sub">
+            <input id="bda_td" value="0" oninput="calculer()">
+            <input id="bda_tp" value="0" oninput="calculer()">
+        </div>
+        <input value="3" disabled>
+    </div>
+
+    <div class="row">
+        <span>SFAB</span>
+        <input id="sfab_exam" value="0" oninput="calculer()">
+        <input id="sfab_cc" value="0" oninput="calculer()">
+        <input value="2" disabled>
+    </div>
+
+    <div class="row">
+        <span>ETHIQUE</span>
+        <input disabled>
+        <input id="ethique_cc" value="0" oninput="calculer()">
+        <input value="1" disabled>
+    </div>
+
+    <hr>
+
+    <div class="row result">
+        <span>المعدل العام</span>
+        <input id="resultat" value="0.00" readonly>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

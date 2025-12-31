@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    width: 550px;
+    margin: auto;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 90px 65px 150px 55px;
+    gap: 12px;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.header {
+    font-weight: bold;
+}
+
+input {
+    width: 60px;
+    padding: 6px;
+    text-align: center;
+}
+
+.sub {
+    display: flex;
+    gap: 10px;
+}
+
+.result input {
+    width: 120px;
+    font-weight: bold;
+    background: #eafaf1;
+}
