@@ -1,101 +1,104 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>حساب المعدل العام</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Average Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>حساب المعدل العام للفصل</h1>
+<div class="app">
 
-<div class="container">
+    <h1>Semester Average</h1>
 
-    <div class="row header">
-        <span>المادة</span>
-        <span>Exam</span>
-        <span>CC / TD / TP</span>
-        <span>المعامل</span>
-    </div>
+    <div class="table">
 
-    <div class="row">
-        <span>AND</span>
-        <input id="and_exam" value="0" oninput="calculer()">
-        <input id="and_cc" value="0" oninput="calculer()">
-        <input value="2" disabled>
-    </div>
-
-    <div class="row">
-        <span>MODSIM</span>
-        <input id="modsim_exam" value="0" oninput="calculer()">
-        <input id="modsim_cc" value="0" oninput="calculer()">
-        <input value="2" disabled>
-    </div>
-
-    <div class="row">
-        <span>ROC</span>
-        <input id="roc_exam" value="0" oninput="calculer()">
-        <input id="roc_cc" value="0" oninput="calculer()">
-        <input value="2" disabled>
-    </div>
-
-    <div class="row">
-        <span>AA</span>
-        <input id="aa_exam" value="0" oninput="calculer()">
-        <input id="aa_cc" value="0" oninput="calculer()">
-        <input value="1" disabled>
-    </div>
-
-    <div class="row">
-        <span>FLI</span>
-        <input id="fli_exam" value="0" oninput="calculer()">
-        <input disabled>
-        <input value="1" disabled>
-    </div>
-
-    <div class="row">
-        <span>TNS</span>
-        <input id="tns_exam" value="0" oninput="calculer()">
-        <input disabled>
-        <input value="1" disabled>
-    </div>
-
-    <div class="row">
-        <span>ASR</span>
-        <input id="asr_exam" value="0" oninput="calculer()">
-        <input id="asr_cc" value="0" oninput="calculer()">
-        <input value="2" disabled>
-    </div>
-
-    <div class="row">
-        <span>BDA</span>
-        <input id="bda_exam" value="0" oninput="calculer()">
-        <div class="sub">
-            <input id="bda_td" value="0" oninput="calculer()">
-            <input id="bda_tp" value="0" oninput="calculer()">
+        <div class="row header">
+            <span>Subject</span>
+            <span>Exam</span>
+            <span>CC / TD / TP</span>
+            <span>Coef</span>
         </div>
-        <input value="3" disabled>
+
+        <div class="row">
+            <span>AND</span>
+            <input value="0" id="and_exam" oninput="calculer()">
+            <input value="0" id="and_cc" oninput="calculer()">
+            <span class="coef">2</span>
+        </div>
+
+        <div class="row">
+            <span>MODSIM</span>
+            <input value="0" id="modsim_exam" oninput="calculer()">
+            <input value="0" id="modsim_cc" oninput="calculer()">
+            <span class="coef">2</span>
+        </div>
+
+        <div class="row">
+            <span>ROC</span>
+            <input value="0" id="roc_exam" oninput="calculer()">
+            <input value="0" id="roc_cc" oninput="calculer()">
+            <span class="coef">2</span>
+        </div>
+
+        <div class="row">
+            <span>AA</span>
+            <input value="0" id="aa_exam" oninput="calculer()">
+            <input value="0" id="aa_cc" oninput="calculer()">
+            <span class="coef">1</span>
+        </div>
+
+        <div class="row">
+            <span>FLI</span>
+            <input value="0" id="fli_exam" oninput="calculer()">
+            <input disabled>
+            <span class="coef">1</span>
+        </div>
+
+        <div class="row">
+            <span>TNS</span>
+            <input value="0" id="tns_exam" oninput="calculer()">
+            <input disabled>
+            <span class="coef">1</span>
+        </div>
+
+        <div class="row">
+            <span>ASR</span>
+            <input value="0" id="asr_exam" oninput="calculer()">
+            <input value="0" id="asr_cc" oninput="calculer()">
+            <span class="coef">2</span>
+        </div>
+
+        <div class="row">
+            <span>BDA</span>
+            <input value="0" id="bda_exam" oninput="calculer()">
+            <div class="sub">
+                <input value="0" id="bda_td" oninput="calculer()">
+                <input value="0" id="bda_tp" oninput="calculer()">
+            </div>
+            <span class="coef">3</span>
+        </div>
+
+        <div class="row">
+            <span>SFAB</span>
+            <input value="0" id="sfab_exam" oninput="calculer()">
+            <input value="0" id="sfab_cc" oninput="calculer()">
+            <span class="coef">2</span>
+        </div>
+
+        <div class="row">
+            <span>ETHICS</span>
+            <input disabled>
+            <input value="0" id="ethique_cc" oninput="calculer()">
+            <span class="coef">1</span>
+        </div>
+
     </div>
 
-    <div class="row">
-        <span>SFAB</span>
-        <input id="sfab_exam" value="0" oninput="calculer()">
-        <input id="sfab_cc" value="0" oninput="calculer()">
-        <input value="2" disabled>
-    </div>
-
-    <div class="row">
-        <span>ETHIQUE</span>
-        <input disabled>
-        <input id="ethique_cc" value="0" oninput="calculer()">
-        <input value="1" disabled>
-    </div>
-
-    <hr>
-
-    <div class="row result">
-        <span>المعدل العام</span>
-        <input id="resultat" value="0.00" readonly>
+    <div class="result-box">
+        <span>Overall Average</span>
+        <input id="resultat" readonly value="0.00">
     </div>
 
 </div>
